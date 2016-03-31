@@ -15,7 +15,7 @@ DTBIMAGE="dtb"
 DEFCONFIG="phasma_defconfig"
 
 # Kernel Details
-VER=".R7.M.bullhead."
+VER=".R8.M.bullhead."
 
 # Paths
 KERNEL_DIR=`pwd`
@@ -113,6 +113,13 @@ case "$echoice" in
 		TC="UBER6.0"
 		echo
 		echo "Using UBERTC 6.0"
+		break
+		;;
+	7 )
+		export CROSS_COMPILE=${HOME}/android/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+		TC="AOSP4.9"
+		echo
+		echo "Using AOSP 4.9"
 		break
 		;;
 	* )
